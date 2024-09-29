@@ -13,7 +13,48 @@ export function RouletteScreenComponent() {
   const [firstAttack, setFirstAttack] = useState<string | null>(null)
   const [isSpinning, setIsSpinning] = useState(false)
 
-  const topics = ["Pop", "Rock", "Ballad", "Anime", "Oldies", "Hip-Hop"]
+  const topics = [
+    "アニソン",
+    "ボカロ",
+    "J-POP",
+    "ラブソング",
+    "元気が出る曲",
+    "切ない曲",
+    "デュエット曲",
+    "昭和歌謡",
+    "夏の曲",
+    "冬の曲",
+    "卒業ソング",
+    "クリスマスソング",
+    "盛り上がる曲",
+    "バラード",
+    "洋楽",
+    "懐メロ",
+    "ドラマ主題歌",
+    "映画主題歌",
+    "ヒップホップ",
+    "ロック",
+    "ダンス曲",
+    "カバー曲",
+    "新曲",
+    "名曲",
+    "女性アーティストの曲",
+    "男性アーティストの曲",
+    "グループ曲",
+    "応援ソング",
+    "失恋ソング",
+    "パーティーソング",
+    "童謡・唱歌",
+    "R&B",
+    "ジャズ",
+    "クラシック",
+    "アコースティック",
+    "エレクトロニカ",
+    "民族音楽",
+    "ワールドミュージック",
+    "ゴスペル",
+    "インディーズ",
+  ];
   const teams = ["チーム O", "チーム X"]
 
   const spinRoulette = (setter: React.Dispatch<React.SetStateAction<any>>, options: any[]) => {
@@ -35,7 +76,7 @@ export function RouletteScreenComponent() {
       setScore(null)
       setTopic(null)
       setFirstAttack(null)
-      spinRoulette(setScore, Array.from({ length: 100 }, (_, i) => i + 1))
+      spinRoulette(setScore, Array.from({ length: 23 }, (_, i) => i + 78))
       spinRoulette(setTopic, topics)
       spinRoulette(setFirstAttack, teams)
     }
